@@ -1,0 +1,22 @@
+<h1 mat-dialog-tittle>Formulario agregar producto</h1>
+<div mat-dialog-content>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Nombre de producto</mat-label>
+        <input matInput placeholder="Ingresar el nombre">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label placeholder="Categoría">Categoría</mat-label>
+        <mat-select>
+            <mat-option value="computacion">Computación</mat-option>
+            <mat-option value="electronica">Electrónica</mat-option>
+            <mat-option value="redes">Redes</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+</div>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Guardar</button>
+</mat-dialog-actions>
