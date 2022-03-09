@@ -1,23 +1,34 @@
-import { Component, ComponentFactoryResolver } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'agular-material';
-  constructor(public dialog: MatDialog) {}
+
+  equipos : any;
+
+  constructor(public dialog: MatDialog, private api: ApiService) {}
+
+  ngOnInit(): void {
+    this.mostrarTodos();
+  }
+  
+
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogComponent);
+    const dialogRef = this.dialog.open(DialogComponent,{ width:'30%'});
+  }
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('Acá se guarda...')
-      console.log(`Dialog result: ${result}`);
-    });
+  mostrarTodos(){
+    this.api.getEquipos().subscribe(data=>{
+      this.equipos = data;
+    })
   }
 
 }
