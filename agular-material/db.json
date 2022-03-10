@@ -107,6 +107,15 @@
       "precio": 32555000,
       "comentario": "un día histórico",
       "id": 12
+    },
+    {
+      "nombre": "linterna",
+      "categoria": "electronica",
+      "fecha": "2022-03-01T03:00:00.000Z",
+      "tipo": "Reciclado",
+      "precio": 33333334,
+      "comentario": "Una linterna muy alumbradora",
+      "id": 13
     }
   ],
   "comments": [
