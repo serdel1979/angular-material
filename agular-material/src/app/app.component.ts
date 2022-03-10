@@ -43,6 +43,15 @@ export class AppComponent implements OnInit {
     })
   }
 
+
+editProducto(row: any){
+   this.dialog.open(DialogComponent,{
+     width:'30%',
+     data: row
+   })
+}
+
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../services/api.service';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { inject } from '@angular/core/testing';
 
 @Component({
   selector: 'app-dialog',
@@ -13,7 +14,7 @@ export class DialogComponent implements OnInit {
   listaEquipos = ["Nuevo", "Segunda mano", "Reciclado"]
   equipForm !: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private services: ApiService, private dialogRef: MatDialogRef<DialogComponent> ) { }
+  constructor(private formBuilder: FormBuilder, private services: ApiService, @Inject(MAT_DIALOG_DATA) public editData: any, private dialogRef: MatDialogRef<DialogComponent> ) { }
 
   ngOnInit(): void {
     this.equipForm = this.formBuilder.group({
@@ -23,7 +24,16 @@ export class DialogComponent implements OnInit {
       tipo: ['', Validators.required],
       precio: ['', Validators.required],
       comentario: ['', Validators.required],
-    })
+    });
+    
+    if(this.editData){
+      this.equipForm.controls['nombre'].setValue(this.editData.nombre);
+      this.equipForm.controls['categoria'].setValue(this.editData.categoria);
+      this.equipForm.controls['fecha'].setValue(this.editData.fecha);
+      this.equipForm.controls['tipo'].setValue(this.editData.tipo);
+      this.equipForm.controls['precio'].setValue(this.editData.precio);
+      this.equipForm.controls['comentario'].setValue(this.editData.comentario);
+    }
   }
 
 
@@ -42,5 +52,7 @@ export class DialogComponent implements OnInit {
       })
     }
   }
+
+
 
 }
