@@ -3,119 +3,56 @@
     {
       "nombre": "celular",
       "categoria": "electronica",
-      "fecha": "2022-03-09T03:00:00.000Z",
-      "tipo": "Nuevo",
-      "precio": 20000,
-      "comentario": "un celular roto",
+      "fecha": "2022-03-01T03:00:00.000Z",
+      "tipo": "Reciclado",
+      "precio": 1,
+      "comentario": "un celular roto Y DESTRUIDO",
       "id": 1
     },
     {
-      "nombre": "pc",
-      "categoria": "computacion",
-      "fecha": "2022-03-08T03:00:00.000Z",
-      "tipo": "Segunda mano",
-      "precio": 15000,
-      "comentario": "pc que estaba tirado en el depósito",
-      "id": 2
-    },
-    {
-      "nombre": "herrajes oxidados",
-      "categoria": "electronica",
-      "fecha": "2022-03-09T03:00:00.000Z",
-      "tipo": "Reciclado",
-      "precio": 15200,
-      "comentario": "hola jeje",
-      "id": 3
-    },
-    {
       "nombre": "candado",
-      "categoria": "computacion",
-      "fecha": "2022-03-01T03:00:00.000Z",
-      "tipo": "Reciclado",
+      "categoria": "redes",
+      "fecha": "2022-03-10T03:00:00.000Z",
+      "tipo": "Segunda mano",
       "precio": 2333,
       "comentario": "un candado re loco",
       "id": 4
     },
     {
-      "nombre": "sthgh",
+      "nombre": "cigarrillos",
       "categoria": "electronica",
-      "fecha": "2022-03-01T03:00:00.000Z",
-      "tipo": "Reciclado",
-      "precio": 33333334,
-      "comentario": "bgh dfg  f fgdsfg gfg fgdfg fg f",
-      "id": 5
+      "fecha": "2022-03-15T03:00:00.000Z",
+      "tipo": "Nuevo",
+      "precio": 6500,
+      "comentario": "Un cigarro",
+      "id": 11
     },
     {
-      "nombre": "pelota",
-      "categoria": "redes",
-      "fecha": "2022-03-11T03:00:00.000Z",
+      "nombre": "celular",
+      "categoria": "electronica",
+      "fecha": "2022-03-09T03:00:00.000Z",
+      "tipo": "Reciclado",
+      "precio": 20000,
+      "comentario": "un celular nuevesito",
+      "id": 14
+    },
+    {
+      "nombre": "panchos",
+      "categoria": "electronica",
+      "fecha": "2022-03-16T03:00:00.000Z",
       "tipo": "Nuevo",
-      "precio": 234,
-      "comentario": "precio incomprado",
-      "id": 6
+      "precio": 3211,
+      "comentario": "COMIDA de la luna",
+      "id": 15
     },
     {
       "nombre": "agua",
       "categoria": "electronica",
-      "fecha": "2022-03-04T03:00:00.000Z",
-      "tipo": "Reciclado",
-      "precio": 33,
-      "comentario": "safgh zfg df",
-      "id": 7
-    },
-    {
-      "nombre": "rr",
-      "categoria": "electronica",
       "fecha": "2022-03-08T03:00:00.000Z",
-      "tipo": "Segunda mano",
-      "precio": 566,
-      "comentario": "dfgh dfg dfg dfh gh ",
-      "id": 8
-    },
-    {
-      "nombre": "hojalata",
-      "categoria": "redes",
-      "fecha": "2022-03-07T03:00:00.000Z",
-      "tipo": "Segunda mano",
-      "precio": 435,
-      "comentario": "digo algo loco loco y re loco",
-      "id": 9
-    },
-    {
-      "nombre": "zapatillas",
-      "categoria": "electronica",
-      "fecha": "2022-03-07T03:00:00.000Z",
-      "tipo": "Nuevo",
-      "precio": 8500,
-      "comentario": "la nueva zapatilla loca",
-      "id": 10
-    },
-    {
-      "nombre": "cigarrillos",
-      "categoria": "electronica",
-      "fecha": "2022-03-15T03:00:00.000Z",
-      "tipo": "Segunda mano",
-      "precio": 6500,
-      "comentario": "Un cigarro electrico",
-      "id": 11
-    },
-    {
-      "nombre": "pelucas",
-      "categoria": "redes",
-      "fecha": "2022-09-12T03:00:00.000Z",
-      "tipo": "Nuevo",
-      "precio": 32555000,
-      "comentario": "un día histórico",
-      "id": 12
-    },
-    {
-      "nombre": "linterna",
-      "categoria": "electronica",
-      "fecha": "2022-03-01T03:00:00.000Z",
       "tipo": "Reciclado",
-      "precio": 33333334,
-      "comentario": "Una linterna muy alumbradora",
-      "id": 13
+      "precio": 52000,
+      "comentario": "AGUA RADIACTIVA",
+      "id": 16
     }
   ],
   "comments": [

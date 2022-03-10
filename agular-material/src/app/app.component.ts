@@ -1,10 +1,12 @@
-import { Component, ComponentFactoryResolver, OnInit, ViewChild } from '@angular/core';
+import { Component, ChangeDetectorRef, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
 import { ApiService } from './services/api.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,9 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+
+  subscription: Subscription | undefined;
 
   displayedColumns: string[] = ['nombre', 'categoria', 'tipo', 'fecha', 'precio', 'comentario', 'accion'];
   dataSource!: MatTableDataSource<any>;
@@ -23,16 +28,23 @@ export class AppComponent implements OnInit {
 
   equipos: any;
 
-  constructor(public dialog: MatDialog, private api: ApiService) { }
+  constructor(public dialog: MatDialog, private api: ApiService, private changeDetectorRefs: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.mostrarTodos();
+
+    this.subscription = this.api.refresh$().subscribe(() => {
+      this.mostrarTodos()
+    })
   }
 
 
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogComponent, { width: '30%' });
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '40%'
+    });
+    this.mostrarTodos();
   }
 
   mostrarTodos() {
@@ -44,12 +56,14 @@ export class AppComponent implements OnInit {
   }
 
 
-editProducto(row: any){
-   this.dialog.open(DialogComponent,{
-     width:'30%',
-     data: row
-   })
-}
+  editProducto(row: any) {
+    this.dialog.open(DialogComponent, {
+      width: '30%',
+      data: row
+    }).afterClosed().subscribe(result => {
+      this.mostrarTodos()
+    });
+  }
 
 
   applyFilter(event: Event) {
@@ -59,6 +73,13 @@ editProducto(row: any){
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  borrarEquipo(row: any) {
+    this.api.borrarEquipo(row).subscribe(data => {
+      alert("Equipo borrado!!!");
+      this.mostrarTodos();
+    })
   }
 
 }
