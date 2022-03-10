@@ -80,6 +80,24 @@
       "precio": 435,
       "comentario": "digo algo loco loco y re loco",
       "id": 9
+    },
+    {
+      "nombre": "zapatillas",
+      "categoria": "electronica",
+      "fecha": "2022-03-07T03:00:00.000Z",
+      "tipo": "Nuevo",
+      "precio": 8500,
+      "comentario": "la nueva zapatilla loca",
+      "id": 10
+    },
+    {
+      "nombre": "cigarrillos",
+      "categoria": "electronica",
+      "fecha": "2022-03-15T03:00:00.000Z",
+      "tipo": "Segunda mano",
+      "precio": 6500,
+      "comentario": "Un cigarro electrico",
+      "id": 11
     }
   ],
   "comments": [
