@@ -98,6 +98,15 @@
       "precio": 6500,
       "comentario": "Un cigarro electrico",
       "id": 11
+    },
+    {
+      "nombre": "pelucas",
+      "categoria": "redes",
+      "fecha": "2022-09-12T03:00:00.000Z",
+      "tipo": "Nuevo",
+      "precio": 32555000,
+      "comentario": "un día histórico",
+      "id": 12
     }
   ],
   "comments": [
